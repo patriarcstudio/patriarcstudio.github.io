@@ -1,6 +1,7 @@
 import React from "react";
 import { Link as ReactRouterLink } from "react-router-dom";
 import { HiMenuAlt4 } from "react-icons/hi";
+import { MdLocationPin } from "react-icons/md";
 import {
   Container,
   Flex,
@@ -34,13 +35,22 @@ export const Header: React.FC = () => {
               </Text>
             </Link>
           </ReactRouterLink>
-          <IconButton
-            aria-label="Open menu"
-            icon={<HiMenuAlt4 className="text-2xl" />}
-            variant="ghost"
-            ref={btnRef}
-            onClick={onOpen}
-          />
+          <div>
+            <Link href="https://www.google.com/maps/dir/10.913671,75.917759/patriarc+architecture+studio+tirur/@10.9171672,75.9182454,16z/data=!3m1!4b1!4m9!4m8!1m1!4e1!1m5!1m1!1s0x3ba7b18861012d97:0x6cc0ebde40c10ddd!2m2!1d75.9275018!2d10.9206265">
+              <IconButton
+                aria-label="Open menu"
+                icon={<MdLocationPin className="text-2xl" />}
+                variant="ghost"
+              />
+            </Link>
+            <IconButton
+              aria-label="Open menu"
+              icon={<HiMenuAlt4 className="text-2xl" />}
+              variant="ghost"
+              ref={btnRef}
+              onClick={onOpen}
+            />
+          </div>
         </Flex>
       </Container>
       <Drawer
@@ -74,6 +84,9 @@ export const Header: React.FC = () => {
               <div className="ml-16">
                 <h2 className="text-lg opacity-70">Menu</h2>
                 <div className="mt-2 flex flex-col">
+                  <Link fontSize="5xl">
+                    <ReactRouterLink to="/">Home</ReactRouterLink>
+                  </Link>
                   <Link fontSize="5xl" href="#projects">
                     Projects
                   </Link>
