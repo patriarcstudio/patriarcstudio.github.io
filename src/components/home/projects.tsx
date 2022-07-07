@@ -25,7 +25,7 @@ export const Projects: React.FC<Props> = ({
       </div>
       <div className="mt-8 grid grid-cols-1 md:grid-cols-2 gap-2">
         <ImageSlider images={exteriors} />
-        <ImageSlider images={interiors} />
+        <ImageSlider images={interiors} className="mt-8 md:mt-0" />
       </div>
       <div className="mt-8">
         <ReactLink to={link}>
