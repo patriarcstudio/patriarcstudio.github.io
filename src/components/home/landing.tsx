@@ -12,7 +12,7 @@ export const Landing: React.FC = () => {
           className="absolute top-0 left-0 w-full h-full object-cover"
         >
           <source
-            src="https://www.w3schools.com/html/mov_bbb.mp4"
+            src="https://raw.githubusercontent.com/patriarcstudio/patriarcstudio.github.io/assets/lumion_render.mp4"
             type="video/mp4"
           />
         </video>

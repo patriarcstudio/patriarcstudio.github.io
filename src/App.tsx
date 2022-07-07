@@ -7,6 +7,7 @@ import { Header } from "./components/header";
 import { HomePage } from "./pages";
 import { Footer } from "./components/footer";
 import { ProjectPage } from "./pages/projectPage";
+import { TrainingPage } from "./pages/training";
 
 export const App: React.FC = () => {
   const images = [
@@ -39,6 +40,7 @@ export const App: React.FC = () => {
             path="/ongoing"
             element={<ProjectPage title="On going projects" images={images} />}
           />
+          <Route path="/training" element={<TrainingPage />} />
         </Routes>
         <Footer />
       </Router>
