@@ -32,6 +32,10 @@ export const Footer: React.FC = () => {
             <Text fontSize="lg" className="opacity-80">
               Tirur, Malappuram, 676101
             </Text>
+            <Text mt={5} fontSize="lg" className="opacity-80">
+              <Link href="tel:+919562797208">+91 9562797208</Link>,{" "}
+              <Link href="tel:+918136020202">+91 8136020202</Link>
+            </Text>
           </div>
           <div className="mt-5">
             <Link
