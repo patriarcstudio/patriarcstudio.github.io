@@ -14,26 +14,10 @@ const ProjectPage: NextPage = () => {
           mt={8}
           className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2"
         >
-          <img
-            src="https://raw.githubusercontent.com/patriarcstudio/patriarcstudio.github.io/assets/img1.jpg"
-            alt=""
-            className="rounded shadow-md cursor-pointer transition-all duration-200 hover:opacity-70"
-          />
-          <img
-            src="https://raw.githubusercontent.com/patriarcstudio/patriarcstudio.github.io/assets/img2.jpg"
-            alt=""
-            className="rounded shadow-md cursor-pointer transition-all duration-200 hover:opacity-70"
-          />
-          <img
-            src="https://raw.githubusercontent.com/patriarcstudio/patriarcstudio.github.io/assets/img3.jpg"
-            alt=""
-            className="rounded shadow-md cursor-pointer transition-all duration-200 hover:opacity-70"
-          />
-          <img
-            src="https://raw.githubusercontent.com/patriarcstudio/patriarcstudio.github.io/assets/img4.jpg"
-            alt=""
-            className="rounded shadow-md cursor-pointer transition-all duration-200 hover:opacity-70"
-          />
+          <Image src="https://raw.githubusercontent.com/patriarcstudio/patriarcstudio.github.io/assets/img1.jpg" />
+          <Image src="https://raw.githubusercontent.com/patriarcstudio/patriarcstudio.github.io/assets/img2.jpg" />
+          <Image src="https://raw.githubusercontent.com/patriarcstudio/patriarcstudio.github.io/assets/img3.jpg" />
+          <Image src="https://raw.githubusercontent.com/patriarcstudio/patriarcstudio.github.io/assets/img4.jpg" />
           <div className="mt-10 lg:mt-0 flex items-center justify-center">
             <Text fontSize="2xl" fontWeight="medium">
               Website under construction 🚧
@@ -46,3 +30,20 @@ const ProjectPage: NextPage = () => {
 };
 
 export default ProjectPage;
+
+interface Props {
+  src: string;
+}
+
+const Image: React.FC<Props> = ({ src }) => {
+  return (
+    <picture>
+      <source srcSet={src} type="image/png" />
+      <img
+        src={src}
+        alt=""
+        className="rounded shadow-md cursor-pointer transition-all duration-200 hover:opacity-70"
+      />
+    </picture>
+  );
+};
